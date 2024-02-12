@@ -1,6 +1,6 @@
 ﻿Complex x = new(2.0, 1.0);
 Complex y = new(1.0, 2.0);
-Complex refer = new(3.0, 4.0);
+Complex refer = new(3.0, 3.0);
 
 TestComplex.Test(Complex.Add(x, y), refer, "Sucet");
 class Complex
