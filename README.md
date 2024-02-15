@@ -1,4 +1,7 @@
-# bpc-oop-247199
-BPC-OOP (2023/2024) - Viktor Vošček
+# BPC-OOP
+### 2023/2024L
+Viktor Vošček
 
-![FEKT logo](https://www.fekt.vut.cz/assets_fekt/img/bg/share/facebook.png)
+`247199@vutbr.cz`
+
+![FEKT logo](https://www.fekt.vut.cz/elektron/img/FEKT_zkracene_barevne_ram_m.png)
