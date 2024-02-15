@@ -1,8 +1,25 @@
-﻿Complex x = new(2.0, 1.0);
-Complex y = new(1.0, 2.0);
-Complex refer = new(3.0, 3.0);
+﻿class CV02
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Testujem cisla x=(1 + i2) a y=(2 + i3)");
+        Complex x = new(1.0, 2.0);
+        Complex y = new(2.0, 3.0);
 
-TestComplex.Test(Complex.Add(x, y), refer, "Sucet");
+        TestComplex.Test(Complex.Add(x, y), new(3.0, 5.0), "Sucet");
+        TestComplex.Test(Complex.Substract(x, y), new(-1.0, -1.0), "Odcitanie");
+        TestComplex.Test(Complex.Multiply(x, y), new(-4.0, +7.0), "Nasobenie");
+        TestComplex.Test(Complex.Divide(x, y), new(0.6154, 0.07692), "Delenie");    //  new(0.6153846154, 0.07692307692)
+        TestComplex.Test(Complex.Decrement(x), new(0, 1.0), "Dekrement");
+        TestComplex.Test(Complex.Conjugate(x), new(1.0, -2.0), "Komplexne zdruzene");
+        Console.WriteLine("Cisla sa rovnaju: " + Complex.Equals(x, y));
+        Console.WriteLine("Cisla sa nerovnaju: " + Complex.equalsNot(x, y));
+        Console.WriteLine("Modul: " + Complex.Modul(x));
+        Console.WriteLine("Argument: " + Complex.Arg(x));
+
+    }
+}
+
 class Complex
 {
     static readonly char imUnit = 'i';
@@ -128,7 +145,7 @@ class TestComplex
         }
         else
         {
-            Console.Write($"\nChyba! Ocakavana hodnota: {Complex.Display(refer)} Skutocna hodnota: {Complex.Display(calc)}");
+            Console.Write($"ERROR! \nOcakavana hodnota: {Complex.Display(refer)} Skutocna hodnota: {Complex.Display(calc)}\n");
         }
     }
 }
