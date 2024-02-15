@@ -33,7 +33,6 @@ class Complex
     }
 
     // vrati string s komplexnym cislom v algebraickom tvare
-
     public override string ToString()
     {
         char sign = '+';
@@ -42,11 +41,11 @@ class Complex
             sign = '-';     // ak je imaginarna zlozka zaporna tak sa zmeni znamienko
         }
 
-        // return Realna + sign + imUnit + Math.Abs(Imaginarni));
         return ($"{Realna} {sign} {imUnit}{Math.Abs(Imaginarni)}");
     }
 
-    // DEPRECATED !!
+    /*
+    DEPRECATED !!
     public static string Display(Complex x)
     {
         char sign = '+';
@@ -60,6 +59,7 @@ class Complex
 
         return x.Realna.ToString() + sign + imUnit + Math.Abs(x.Imaginarni).ToString();
     }
+    */
 
     // +
     public static Complex Add(Complex x, Complex y)
