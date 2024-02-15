@@ -33,6 +33,20 @@ class Complex
     }
 
     // vrati string s komplexnym cislom v algebraickom tvare
+
+    public override string ToString()
+    {
+        char sign = '+';
+        if (Imaginarni < 0)
+        {
+            sign = '-';     // ak je imaginarna zlozka zaporna tak sa zmeni znamienko
+        }
+
+        // return Realna + sign + imUnit + Math.Abs(Imaginarni));
+        return ($"{Realna} {sign} {imUnit}{Math.Abs(Imaginarni)}");
+    }
+
+    // DEPRECATED !!
     public static string Display(Complex x)
     {
         char sign = '+';
@@ -145,7 +159,7 @@ class TestComplex
         }
         else
         {
-            Console.Write($"ERROR! \nOcakavana hodnota: {Complex.Display(refer)} Skutocna hodnota: {Complex.Display(calc)}\n");
+            Console.Write($"ERROR! \nOcakavana hodnota: {refer} Skutocna hodnota: {calc}\n");
         }
     }
 }
