@@ -130,7 +130,7 @@ class Matrix
 
         if (aColumns != bRows)
         {
-            throw new Exception("Neplatne rozmery matic.");
+            throw new Exception("Matice maju neplatny rozmer.");
         }
 
         double[,] res = new double[aRows, bColumns];
