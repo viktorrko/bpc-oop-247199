@@ -16,7 +16,6 @@
         Console.WriteLine("Cisla sa nerovnaju: " + Complex.equalsNot(x, y));
         Console.WriteLine("Modul: " + Complex.Modul(x));
         Console.WriteLine("Argument: " + Complex.Arg(x));
-
     }
 }
 
