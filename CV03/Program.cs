@@ -2,12 +2,17 @@
 {
     public static void Main(string[] args)
     {
-        Matrix a = new Matrix(new double[,] { { 1, 1, 3 }, { 1, 1, 2 } });
+        Matrix a = new Matrix(new double[,] { { 1, 1 }, { 1, 1 } });
         Matrix b = new Matrix(new double[,] { { 1, 1 }, { 1, 3 } });
+
+        Console.WriteLine(a);
+        Console.WriteLine(b);
 
         try
         {
+            Console.WriteLine("a + b=");
             Console.WriteLine(Matrix.Add(a, b));
+            Console.WriteLine("a - b=");
             Console.WriteLine(Matrix.Substract(a, b));
         }
         catch (Exception e)
@@ -17,6 +22,7 @@
 
         try
         {
+            Console.WriteLine("a * b=");
             Console.WriteLine(Matrix.Multiply(a, b));
         }
         catch (Exception e)
@@ -24,13 +30,14 @@
             Console.WriteLine($"Chyba: {e.Message}");
         }
 
-        Console.WriteLine(Equals(a, b));
-        Console.WriteLine(Matrix.EqualsNot(a, b));
-        Console.WriteLine(Matrix.Decrement(a));
+        
+        Console.WriteLine("Rovnaju sa matice? " + Matrix.Equals(a, b));
+        Console.WriteLine("Nerovnaju sa matice? " + Matrix.EqualsNot(a, b));
+        Console.WriteLine("Dekrement matice a\n" +Matrix.Decrement(a));
 
         try
         {
-            Console.WriteLine(Matrix.Determinant(a));
+            Console.WriteLine("Determinant matice a = " + Matrix.Determinant(a));
         }
         catch (Exception e)
         {
