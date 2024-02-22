@@ -1,20 +1,14 @@
-﻿using System.Data.Common;
-using System.Drawing;
-using System.Numerics;
-
-class Matrix
+﻿class CV03
 {
-    public double[,] matrix;
-
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
         Matrix a = new Matrix(new double[,] { { 1, 1, 3 }, { 1, 1, 2 } });
         Matrix b = new Matrix(new double[,] { { 1, 1 }, { 1, 3 } });
 
         try
         {
-            Console.WriteLine(Add(a, b));
-            Console.WriteLine(Substract(a, b));
+            Console.WriteLine(Matrix.Add(a, b));
+            Console.WriteLine(Matrix.Substract(a, b));
         }
         catch (Exception e)
         {
@@ -23,7 +17,7 @@ class Matrix
 
         try
         {
-            Console.WriteLine(Multiply(a, b));
+            Console.WriteLine(Matrix.Multiply(a, b));
         }
         catch (Exception e)
         {
@@ -31,18 +25,23 @@ class Matrix
         }
 
         Console.WriteLine(Equals(a, b));
-        Console.WriteLine(EqualsNot(a, b));
-        Console.WriteLine(Decrement(a));
-        
+        Console.WriteLine(Matrix.EqualsNot(a, b));
+        Console.WriteLine(Matrix.Decrement(a));
+
         try
         {
-            Console.WriteLine(Determinant(a));
+            Console.WriteLine(Matrix.Determinant(a));
         }
         catch (Exception e)
         {
             Console.WriteLine($"Chyba: {e.Message}");
         }
     }
+}
+
+class Matrix
+{
+    public double[,] matrix;
 
     public Matrix(double[,] matrixIn)
     {
