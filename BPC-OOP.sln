@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CV02", "CV02\CV02.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CV03", "CV03\CV03.csproj", "{40E7A1B8-B838-4B84-A42C-93FE42D9F654}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CV04", "CV04\CV04.csproj", "{68CF1077-5945-4777-9A37-038B638C5350}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CV04", "CV04\CV04.csproj", "{68CF1077-5945-4777-9A37-038B638C5350}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CV05", "CV05\CV05.csproj", "{12073822-1C2E-4B65-B173-11979CAA30E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{68CF1077-5945-4777-9A37-038B638C5350}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68CF1077-5945-4777-9A37-038B638C5350}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68CF1077-5945-4777-9A37-038B638C5350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12073822-1C2E-4B65-B173-11979CAA30E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12073822-1C2E-4B65-B173-11979CAA30E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12073822-1C2E-4B65-B173-11979CAA30E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12073822-1C2E-4B65-B173-11979CAA30E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
