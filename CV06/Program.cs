@@ -40,30 +40,19 @@
 
 public abstract class GrObjekt
 {
-    public virtual void Kresli() { }
+    public abstract void Kresli();
 }
 
 abstract public class Objekt2D : GrObjekt
 {
-    public virtual double SpoctiPlochu()
-    {
-        return 0;
-    }
-
-
+    public abstract double SpoctiPlochu();
 }
 
 abstract public class Objekt3D : GrObjekt
 {
-    public virtual double SpoctiPovrch()
-    {
-        return 0;
-    }
+    public abstract double SpoctiPovrch();
 
-    public virtual double SpoctiObjem()
-    {
-        return 0;
-    }
+    public abstract double SpoctiObjem();
 }
 
 public class Kruh : Objekt2D
@@ -213,12 +202,12 @@ public class Koule : Objekt3D
 
     public override double SpoctiPovrch()
     {
-        return (4 * Double.Pi * r * r);
+        return (4.0 * Double.Pi * r * r);
     }
 
     public override double SpoctiObjem()
     {
-        return ((4/3) * Double.Pi * r * r * r);
+        return ((4.0/3.0) * Double.Pi * r * r * r);
     }
 }
 
@@ -244,6 +233,6 @@ public class Jehlan : Objekt3D
 
     public override double SpoctiObjem()
     {
-        return (1/3) * a * a * v;
+        return (1.0 / 3.0) * a * a * v;
     }
 }
