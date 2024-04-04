@@ -82,6 +82,14 @@ namespace CV09
                 case "0":
                 case ",":
                     Display = s; _stav = Stav.PrvniCislo; break;
+                case "+":
+                case "-":
+                case "*":
+                case "/":
+                    PrveCislo = Double.Parse(Display);
+                    Display = s; Operation = s;
+                    _stav = Stav.Operace;
+                    break;
                 case "back":
                     Display = ""; _stav = Stav.PrvniCislo; break;
                 case "CE":
@@ -123,8 +131,11 @@ namespace CV09
                     DruheCislo = Double.Parse(Display);
                     Calculate();
                     Display = Vysledok.ToString();
+                    DruheCislo = 0;
                     _stav = Stav.Vysledek;
                     break;
+                case "C":
+                    Display = ""; break;
                 case "CE":
                     Display = ""; _stav = Stav.PrvniCislo; break;
                 case "MC":
@@ -197,10 +208,14 @@ namespace CV09
                     _stav = Stav.Operace;
                     break;
                 case "=":
+                    PrveCislo = Double.Parse(Display);
                     Calculate();
                     Display = Vysledok.ToString();
                     _stav = Stav.Vysledek;
+                    DruheCislo = 0;
                     break;
+                case "C":
+                    Display = ""; break;
                 case "CE":
                     Display = ""; _stav = Stav.PrvniCislo; break;
                 case "MC":
