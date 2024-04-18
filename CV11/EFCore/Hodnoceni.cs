@@ -9,7 +9,6 @@ namespace CV11.EFCore
 {
     public class Hodnoceni
     {
-        [Key]
         public int StudentId { get; set; }
         public string PredmetId { get; set; }
         public string Datum { get; set; }
