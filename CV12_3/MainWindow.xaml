@@ -1,0 +1,57 @@
+﻿<Window x:Class="CV12_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CV12_3"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="200"
+        Width="320"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="90" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="140" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right">
+            <Label Height ="30" HorizontalContentAlignment="Right" Content="1. operand" />
+            <Label Height="30"
+                   HorizontalContentAlignment="Right"
+                   Content="2. operand" />
+            <Label Height="30"
+                   HorizontalContentAlignment="Right"
+                   Content="operation" />
+            <Label Height="30" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1"
+                    VerticalAlignment="Center">
+            <TextBox x:Name="Operand1"
+                     Height="30"
+                     VerticalContentAlignment="Center" />
+            <TextBox x:Name="Operand2"
+                     Height="30" />
+            <ComboBox x:Name="Operation"
+                      Height="30">
+                <ComboBoxItem Content="plus" />
+                <ComboBoxItem Content="minus" />
+                <ComboBoxItem Content="krat" />
+                <ComboBoxItem Content="deleno" />
+            </ComboBox>
+            <Button Height="30"
+                    Content="Calc"
+                    Click="Calc_Click"/>
+        </StackPanel>
+
+        <Label x:Name="display"
+               Grid.Column="2"
+               Content="0"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               FontWeight="Bold"
+               FontSize="24" />
+    </Grid>
+</Window>
