@@ -9,7 +9,6 @@ namespace CV11.EFCore
 {
     public class StudentPredmet
     {
-        [Key]
         public int StudentId { get; set; }
         public string PredmetId { get; set; }
     }
